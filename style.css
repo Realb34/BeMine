@@ -1,0 +1,102 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #FED7E2; /* A soft pastel pink as an example */
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #444;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white for the content area */
+}
+
+.gif-container {
+    margin: 20px 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: #ff1493;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff69b4;
+}
+
+#loveReasons {
+    text-align: left; /* Align text to the left for a more traditional look */
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #ffe0f0; /* Lighter pink background for contrast */
+    border-radius: 10px; /* Soft rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+#loveReasons h2 {
+    color: #db7093; /* Deeper pink for the heading */
+}
+
+#loveReasons ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+}
+
+#loveReasons li {
+    margin-bottom: 10px; /* Space out the list items */
+    font-size: 16px;
+    line-height: 1.6; /* Improve readability */
+    position: relative; /* Needed for pseudo-element positioning */
+}
+
+#loveReasons li::before {
+    content: "💖"; /* Adds a heart emoji before each reason */
+    position: absolute;
+    left: -30px; /* Adjust according to your design */
+    top: 0;
+}
+
+.confetti, .heart {
+    position: fixed;
+    will-change: transform;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    to { transform: translateY(100vh); }
+}
+
+.heart {
+    color: pink;
+    opacity: 0.75;
+}
+
+.confetti {
+    width: 5px;
+    height: 5px;
+    background-color: #f0f;
+    opacity: 0.7;
+}
+
